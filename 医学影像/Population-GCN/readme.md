@@ -18,7 +18,7 @@
 3. 使用性别，站点等表型信息构造人口学联通矩阵
 4. 以上两个矩阵相乘作为GCN的输入矩阵
 5. 使用三阶切比雪夫图卷积进行节点分类
-![e85226d5dfcedce6ed014741cee50b5f.png](en-resource://database/509:0)
+![overchart.png](./overchart.png)
 
 
 #### 其他
