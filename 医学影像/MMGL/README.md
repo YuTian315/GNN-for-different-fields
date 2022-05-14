@@ -1,39 +1,41 @@
 
-### 论文名称 - Edge-variational Graph Convolutional Networks for Uncertainty-aware Disease Prediction
+### 论文名称 - Multi-modal Graph Learning for Disease Prediction
 
 #### 环境配置
 
-1. Python 3.7
-2. Pyotrch 1.4
-3. torch-geometric (有点麻烦建议百度)  
-
-安装torch-geometric之前安装pytorch
+1. Python 3.6
+2. Pyotrch 1.1 以上
+3. munkres
 
 #### 运行
 
-1. 使用 fetch_data.py 下载 ABIDE-871 的数据集
-2. 运行  train_eval_evgcn.py
+1. 按照Data preprocessing先处理数据
+2. ABIDE 和 Tadpole 两个数据集运行参数不一样，具体参考.sh文件
+3. 运行完代码可使用attn_vis.py 进行注意力的可视化
 
 #### 模型概述
 
 1. 使用REF(递归特征消除)进行特征选择
-2. 使用功能链接数据利用高斯核生成相似距离邻接矩阵
-3. 使用性别，站点等表型信息构造人口学联通矩阵
-4. 以上两个矩阵相乘合并为一个矩阵， 根据阈值筛选部分边
-5. 把边两边的节点的表型信息拼接，通过全连接层映射（PAE），再通过cos相似度来自适应构图
-6. 通过4层3阶切比雪夫图卷积网络，每层输出结果拼接
-7. MLP对拼接结果进行分类
+2. 功能链接特征，人口学特征，解剖学特征，等特征先通过自注意力融合
+3. 融合之后产生共享性特征（多模态通过注意力矩阵加权之后的特征）和特异性特征（注意力矩阵拉平的特征向量）
+4. 通过一个损失函数对特异性特征进行监督
+5. 特异性特征和共享性特征进行拼接之后用于构造自适应图
+6. 通过cos相似性（代码用的内积）来构图，通过一个图损失函数来限制的图的稀疏性和平滑性（具体看文章部分）
+7. 构造的图和特征通过2层图卷积进行节点分类
 
 ![overchart.png](./overchart.png)
 
-PS:引入了Edge Dropout机制(训练时随机丢弃部分边，缓解过拟合)
+
+#### 文章引用
+
+**该文章发在 TMI 2022**
+
+Zheng, S., Zhu, Z., Liu, Z., Guo, Z., Liu, Y., Yang, Y., & Zhao, Y. (2022). Multi-modal Graph Learning for Disease Prediction. IEEE Transactions on Medical Imaging.
+
+
+**转投**
 
 #### 其他
 
-**该文章发在 MICCAI 2020**
-
-Huang, Y., & Chung, A. (2020, October). Edge-variational graph convolutional networks for uncertainty-aware disease prediction. In International Conference on Medical Image Computing and Computer-Assisted Intervention (pp. 562-572). Springer, Cham.
-
-**转投期刊**
-
-暂未找
+1. 文章特征选择部分存在一定争议，具体看开源代码（论文有链接）的issue
+2. 关于Tadpole数据的结果没有复现出来
