@@ -7,7 +7,7 @@
 2. Pyotrch 1.5
 
 #### 运行
-1. 下载三个图谱的数据（npy后缀）放在data文件夹里面（https://github.com/yutian-newbie/GNN-for-different-fields/releases/tag/ABIDE-Data）
+1. 下载三个图谱的数据（npy后缀）放在data文件夹里面 https://github.com/yutian-newbie/GNN-for-different-fields/releases/tag/ABIDE-Data
 2. 分别设置main_VAE中atlas变量为cc200, aal, dosenbach160
 2. 运行三次main_VAE.py
 4. 运行Vote.py进行三个图谱的投票
