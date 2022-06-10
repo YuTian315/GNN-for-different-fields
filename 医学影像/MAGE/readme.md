@@ -25,7 +25,6 @@
 
 
 #### 参考文献
-**文章发在 Neurocomputing 2020**
 
 Wang, Y., Liu, J., Xiang, Y., Wang, J., Chen, Q., & Chong, J. (2022). MAGE: automatic diagnosis of autism spectrum disorders using multi-atlas graph convolutional networks and ensemble learning. Neurocomputing, 469, 346-353.
 
