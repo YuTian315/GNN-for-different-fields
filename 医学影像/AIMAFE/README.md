@@ -25,12 +25,8 @@
 
 #### 文章引用
 
-**该文章发在 Journal of Neuroscience Methods 2020**
-
 Wang, Y., Wang, J., Wu, F. X., Hayrat, R., & Liu, J. (2020). AIMAFE: autism spectrum disorder identification with multi-atlas deep feature representation and ensemble learning. Journal of Neuroscience Methods, 343, 108840.
 
-
-**转投**
 
 #### 其他
 
