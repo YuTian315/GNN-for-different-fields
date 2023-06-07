@@ -4,4 +4,12 @@
 ## DATASET
 
 ABIDE-1, ABIDE-2, ADHD 预处理数据： http://bisi.cstcloud.cn:8080/app/template/Index.vm
+
 ABIDE原始数据： http://fcon_1000.projects.nitrc.org/indi/abide/
+
+
+## Journal
+
+TMI: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
+
+MIA: https://www.sciencedirect.com/journal/medical-image-analysis
