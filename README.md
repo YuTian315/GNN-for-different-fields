@@ -13,3 +13,7 @@ ABIDE原始数据： http://fcon_1000.projects.nitrc.org/indi/abide/
 TMI: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=42
 
 MIA: https://www.sciencedirect.com/journal/medical-image-analysis
+
+JBHI: https://ieeexplore.ieee.org/xpl/RecentIssue.jsp?punumber=6221020
+
+Neural Networks: https://www.sciencedirect.com/journal/neural-networks
